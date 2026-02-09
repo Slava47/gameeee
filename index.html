@@ -493,7 +493,7 @@ var TRANSLATIONS = {
     bestScore: 'Best: '
   },
   tr: {
-    title: 'Renk Patlamasi',
+    title: 'Renk Patlamas\u0131',
     subtitle: 'Ayni renkteki gruplara dokunun',
     play: 'Oyna',
     continue_: 'Devam',
@@ -514,21 +514,21 @@ var TRANSLATIONS = {
   },
   de: {
     title: 'Farbexplosion',
-    subtitle: 'Tippe auf Gruppen gleichfarbiger Bloecke',
+    subtitle: 'Tippe auf Gruppen gleichfarbiger Bl\u00f6cke',
     play: 'Spielen',
     continue_: 'Weiter',
     restart: 'Neustart',
-    menu: 'Menue',
+    menu: 'Men\u00fc',
     pause: 'Pause',
     score: 'Punkte',
     level: 'Level',
     target: 'Ziel',
     best: 'Beste',
-    moves: 'Zuege',
+    moves: 'Z\u00fcge',
     levelComplete: 'Level geschafft!',
     gameOver: 'Spiel vorbei',
-    watchAd: '+5 Zuege (Werbung)',
-    nextLevel: 'Naechstes Level',
+    watchAd: '+5 Z\u00fcge (Werbung)',
+    nextLevel: 'N\u00e4chstes Level',
     loading: 'Laden...',
     bestScore: 'Beste: '
   },
@@ -545,8 +545,8 @@ var TRANSLATIONS = {
     target: 'Objectif',
     best: 'Meilleur',
     moves: 'Coups',
-    levelComplete: 'Niveau termine!',
-    gameOver: 'Partie terminee',
+    levelComplete: 'Niveau termin\u00e9!',
+    gameOver: 'Partie termin\u00e9e',
     watchAd: '+5 Coups (Pub)',
     nextLevel: 'Suivant',
     loading: 'Chargement...',
@@ -593,7 +593,7 @@ var TRANSLATIONS = {
     bestScore: 'Mejor: '
   },
   pt: {
-    title: 'Explosao de Cores',
+    title: 'Explos\u00e3o de Cores',
     subtitle: 'Toque em grupos de blocos da mesma cor',
     play: 'Jogar',
     continue_: 'Continuar',
@@ -601,14 +601,14 @@ var TRANSLATIONS = {
     menu: 'Menu',
     pause: 'Pausa',
     score: 'Pontos',
-    level: 'Nivel',
+    level: 'N\u00edvel',
     target: 'Meta',
     best: 'Melhor',
     moves: 'Jogadas',
-    levelComplete: 'Nivel completo!',
+    levelComplete: 'N\u00edvel completo!',
     gameOver: 'Fim de jogo',
     watchAd: '+5 Jogadas (Video)',
-    nextLevel: 'Proximo',
+    nextLevel: 'Pr\u00f3ximo',
     loading: 'Carregando...',
     bestScore: 'Melhor: '
   },
@@ -963,15 +963,15 @@ function showRewardedAd() {
 }
 
 function gameplayStart() {
-  try { ysdk?.features?.GameplayAPI?.start(); } catch(e) {}
+  try { if (ysdk && ysdk.features && ysdk.features.GameplayAPI) ysdk.features.GameplayAPI.start(); } catch(e) {}
 }
 
 function gameplayStop() {
-  try { ysdk?.features?.GameplayAPI?.stop(); } catch(e) {}
+  try { if (ysdk && ysdk.features && ysdk.features.GameplayAPI) ysdk.features.GameplayAPI.stop(); } catch(e) {}
 }
 
 function onSDKReady() {
-  try { ysdk?.features?.LoadingAPI?.ready(); } catch(e) {}
+  try { if (ysdk && ysdk.features && ysdk.features.LoadingAPI) ysdk.features.LoadingAPI.ready(); } catch(e) {}
   detectDevice();
   updateAllText();
   showScreen('menu-screen');
@@ -999,9 +999,6 @@ function showScreen(id) {
   }
   var screen = document.getElementById(id);
   if (screen) screen.classList.add('active');
-  if (id === 'game-screen') {
-    document.getElementById('game-screen').classList.add('active');
-  }
 }
 
 function updateBestScore() {
