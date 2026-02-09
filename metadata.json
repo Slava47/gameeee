@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "platform": "desktop_mobile",
+  "orientation": "portrait",
+  "languages": ["ru", "en", "tr", "de", "fr", "it", "es", "pt", "id", "ar", "ja", "ko", "zh"],
+  "age_rating": "0+",
+  "category": "Puzzle",
+  "tags": ["puzzle", "match", "casual", "colorful", "blocks", "tiles", "brain", "logic"],
+  "keywords": {
+    "ru": "цветные блоки, головоломка, казуальная игра, три в ряд, пазл, тайлы",
+    "en": "color blocks, puzzle, casual game, match, tiles, brain teaser"
+  },
+  "title": {
+    "ru": "Цветной Взрыв",
+    "en": "Color Blast"
+  },
+  "description": {
+    "ru": "Нажимайте на группы одинаковых цветных блоков, чтобы убрать их с поля! Чем больше группа - тем больше очков! Проходите уровни, побивайте рекорды и соревнуйтесь с друзьями!",
+    "en": "Tap groups of same-colored blocks to clear them! Bigger groups mean more points! Complete levels, beat high scores and compete with friends!"
+  },
+  "seo_description": {
+    "ru": "Цветной Взрыв - казуальная головоломка с цветными блоками. Нажимайте на группы одинаковых блоков, набирайте очки и проходите уровни. Играйте бесплатно онлайн на Яндекс Играх!",
+    "en": "Color Blast - casual puzzle game with colored blocks. Tap groups of matching blocks, score points and complete levels. Play free online on Yandex Games!"
+  },
+  "how_to_play": {
+    "ru": "Нажмите на группу из двух или более одинаковых цветных блоков, чтобы убрать их. Чем больше группа, тем больше очков вы получите. Наберите целевое количество очков, чтобы пройти уровень. Используйте бонусы за просмотр рекламы для получения дополнительных ходов.",
+    "en": "Tap a group of two or more same-colored blocks to clear them. The bigger the group, the more points you score. Reach the target score to complete the level. Watch ads for bonus moves."
+  }
+}
