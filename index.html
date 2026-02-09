@@ -518,7 +518,7 @@ var TRANSLATIONS = {
     play: 'Spielen',
     continue_: 'Weiter',
     restart: 'Neustart',
-    menu: 'Menu',
+    menu: 'Menue',
     pause: 'Pause',
     score: 'Punkte',
     level: 'Level',
@@ -558,7 +558,7 @@ var TRANSLATIONS = {
     play: 'Gioca',
     continue_: 'Continua',
     restart: 'Riavvia',
-    menu: 'Menu',
+    menu: 'Menu principale',
     pause: 'Pausa',
     score: 'Punti',
     level: 'Livello',
@@ -578,7 +578,7 @@ var TRANSLATIONS = {
     play: 'Jugar',
     continue_: 'Continuar',
     restart: 'Reiniciar',
-    menu: 'Menu',
+    menu: 'Menu principal',
     pause: 'Pausa',
     score: 'Puntos',
     level: 'Nivel',
@@ -1394,7 +1394,6 @@ function addStat(container, label, value) {
 function setupEvents() {
   // Grid interaction
   var gridEl = document.getElementById('grid');
-  var hoveredGroup = [];
 
   gridEl.addEventListener('click', function(e) {
     var tile = e.target.closest('.tile');
