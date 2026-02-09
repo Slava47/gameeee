@@ -838,7 +838,7 @@ var game = {
 var defaultFlags = {
   baseMovesPerLevel: '30',
   minMovesPerLevel: '15',
-  moveDecreasePerLevel: '1'
+  moveDecreasePerLevel: '2'
 };
 var remoteFlags = {};
 
@@ -1012,8 +1012,8 @@ function updateBestScore() {
 
 // ========== GAME LOGIC ==========
 function getNumColors(level) {
-  if (level <= 3) return 4;
-  if (level <= 7) return 5;
+  if (level <= 2) return 4;
+  if (level <= 4) return 5;
   return 6;
 }
 
@@ -1025,7 +1025,7 @@ function getMovesForLevel(level) {
 }
 
 function getTargetScore(level) {
-  return level * 500;
+  return Math.round(level * level * 300 + level * 200);
 }
 
 function startGame(level) {
@@ -1041,9 +1041,9 @@ function startGame(level) {
 
   detectDevice();
   initGrid();
+  showScreen('game-screen');
   renderGrid();
   updateHUD();
-  showScreen('game-screen');
   gameplayStart();
 }
 
